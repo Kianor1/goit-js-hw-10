@@ -1,0 +1,116 @@
+@import url('./reset.css');
+
+body {
+  display: flex;
+  width: 1440px;
+  height: 496px;
+  padding: 36px 929px 316px 156px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px 8px;
+  background: #FFF;
+}
+
+.timer-box {}
+
+input {
+  width: 272px;
+  height: 40px;
+  border-radius: 4px;
+  border-color: #808080;
+  color: #2E2F42;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.64px;
+  padding-left: 16px;
+}
+
+input:hover {
+  border-color: #000000;
+  color: #000000;
+}
+
+input:active {
+  border-color: #4E75FF;
+  color: #808080;
+}
+
+input:disabled {
+  background-color: #FAFAFA;
+}
+
+button {
+  display: inline-flex;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  background: #4E75FF;
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.64px;
+}
+
+button:disabled {
+  background-color: #CFCFCF;
+  color: #989898;
+
+}
+
+button:hover {
+  background-color: #6C8CFF;
+}
+
+.flatpickr-calendar {
+  width: 280px;
+  height: 352px;
+  padding: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  border-radius: 8px;
+  background: #F5F5F5;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.timer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  color: #2E2F42;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #2E2F42;
+}
+
+.value {
+  color: #2E2F42;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px;
+  letter-spacing: 1.6px;
+}
+
+.label {
+  color: #2E2F42;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
