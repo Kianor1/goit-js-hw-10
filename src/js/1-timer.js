@@ -3,13 +3,14 @@ import 'flatpickr/dist/flatpickr.min.css';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
+let selectedDate;
 const options = {
   enableTime: true,
   time_24hr: true,
   defaultDate: new Date(),
   minuteIncrement: 1,
   onClose(selectedDates) {
-    const selectedDate = selectedDates[0];
+    selectedDate = selectedDates[0];
 
     if (selectedDate < new Date()) {
       const startButton = document.querySelector('[data-start]');
@@ -27,17 +28,14 @@ const options = {
 let countdownInterval;
 
 function startCountdown() {
-  const endDate = flatpickr.parseDate(
-    document.getElementById('datetime-picker').value
-  );
   const startButton = document.querySelector('[data-start]');
   startButton.disabled = true;
 
   countdownInterval = setInterval(() => {
     const currentDate = new Date();
-    const timeDifference = endDate - currentDate;
-
-    if (timeDifference <= 0) {
+    const timeDifference = selectedDate - currentDate;
+    console.log(timeDifference);
+    if (timeDifference <= 1000) {
       clearInterval(countdownInterval);
       updateTimer({ days: 0, hours: 0, minutes: 0, seconds: 0 });
       iziToast.success({
